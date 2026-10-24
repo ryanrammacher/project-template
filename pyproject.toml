@@ -6,15 +6,20 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pandas",
-    "pyspark",
     "matplotlib",
 ]
 
 [project.optional-dependencies]
+local = ["pyspark"]
 databricks = ["databricks-connect"]
 
 [dependency-groups]
 dev = ["pytest", "ruff", "ipykernel"]
+
+[tool.uv]
+conflicts = [
+    [{ extra = "local" }, { extra = "databricks" }],
+]
 
 [tool.ruff]
 line-length = 100

@@ -1,6 +1,6 @@
 """Analysis, aggregations, and charts."""
-from pyspark.sql import DataFrame
 import pyspark.sql.functions as F
+from pyspark.sql import DataFrame
 
 
 def count_by(df: DataFrame, col: str) -> DataFrame:

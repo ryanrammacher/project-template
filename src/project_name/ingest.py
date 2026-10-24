@@ -1,5 +1,6 @@
 """Load raw data."""
 from pathlib import Path
+
 from pyspark.sql import DataFrame, SparkSession
 
 RAW_DIR = Path("data/raw")

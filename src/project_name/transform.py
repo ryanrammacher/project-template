@@ -1,5 +1,6 @@
 """Clean and reshape data."""
 import re
+
 from pyspark.sql import DataFrame
 
 
